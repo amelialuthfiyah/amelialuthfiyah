@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../style/output.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body>
+    <header class="bg-black text-white">
+        <div class="container mx-auto py-2 flex justify-between items-center">
+            <div>
+                <img src="logo.png" alt="Kampus Merdeka Logo" class="object-contain h-12">
+            </div>
+            <div class="flex items-center">
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="hover:text-gray-300 font-bold text-sm">Beranda</a>
+                    <a href="#" class="hover:text-gray-300 font-bold text-sm">Program</a>
+                    <a href="#" class="hover:text-gray-300 font-bold text-sm">Butuh Bantuan?</a>
+                </nav>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden" id="hamburger">
+                    <ion-icon name="menu"></ion-icon>
+                </span>
+                <a href="#" class="hidden md:flex items-center hover:text-gray-300 border-b-2 border-transparent transition duration-300 ease-in-out bg-white rounded-full px-6 py-1 ml-2 text-black text-sm">
+                    <i class="fa fa-user mr-1"></i>
+                    Masuk ke Akun
+                </a>
+            </div>
+        </div>
+        <nav class="md:hidden hidden" id="menuItems">
+            <a href="#" class="block py-2 text-center hover:bg-gray-800">Beranda</a>
+            <a href="#" class="block py-2 text-center hover:bg-gray-800">Program</a>
+            <a href="#" class="block py-2 text-center hover:bg-gray-800">Butuh Bantuan?</a>
+            <a href="#" class="block py-2 text-center hover:bg-gray-800">Masuk ke Akun</a>
+        </nav>
+    </header>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menuItems = document.getElementById('menuItems');
+    
+        hamburger.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+
+      
+
+        
+    </header>
+    
+    
+    
+    
+    
+
+
+    <div class="bg-gray-100 py-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Program dan Kegiatan Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg p-6">
+                    <div class="bg-white -md p-6 text-center">
+                        <div class="flex items-center justify-center mb-4">
+                            <img src="kampus.png" alt="Judul" class="w-60 h-30">
+                        </div>
+                        <p class="text-gray-600">Bantu tingkatkan kualitas pengajaran pendidikan 
+                            dasar melalui <b>Kampus Mengajar</b></p>
+                        <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                    </div>
+                </div>
+                <div class="bg-white -md p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="MSIB.png" alt="Judul" class="w-60 h-30">
+                    </div>
+                    <p class="text-gray-600">Rasakan pengalaman 
+                        dunia kerja dengan terjun 
+                        langsung melalui <b>Magang MSIB</b> </p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                </div>
+                <div class="bg-white -md p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="MSIB.png" alt="Judul" class="w-60 h-30">
+                    </div>
+                    <p class="text-gray-600">Riset kolaboratif bersama perusahaan ternama 
+                        melalui <b>Studi Independen</b></p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                </div>
+                <div class="bg-white -md p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="magang.png" alt="Judul" class="w-60 h-30">
+                    </div>
+                    <p class="text-gray-600">Temukan pengalaman dunia kerja yang dikelola secara langsung oleh perusahaan melalui <b>Magang Mandiri</b></p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                </div>
+                <div class="bg-white -md p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="PM.png" alt="Judul" class="w-60 h-30">
+                    </div>
+                    <p class="text-gray-600">Bertukar pengalaman budaya dengan universitas lain 
+                        melalui <b>Pertukaran Mahasiswa</b>dalam negeri</p>
+                    <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                </div>
+                <div class="bg-white -md p-6 text-center">
+                        <div class="flex items-center justify-center mb-4">
+                            <img src="IISMA.png" alt="Judul" class="w-60 h-30">
+                        </div>
+                        <p class="text-gray-600">Perluas wawasan dan koneksi melalui <b>Pertukaran Mahasiswa secara Internasional</b></p>
+                        <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">Selengkapnya</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
