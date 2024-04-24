@@ -4,57 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Regular Expression</title>
 </head>
-<body class="bg-pink-300 min-h-screen py-20 px-10">
-    <div class="w-full h-full max-w-screen mx-0">
-        <div class="flex justify-center">
-            <div class="flex-col">
-                <p class="text-black font-bold text-2xl text-center">Regular Expressions</p>
-            </div>
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-pink-400">
+        <div class="bg-white p-8 rounded-md shadow-md w-full md:w-2/3 lg:w-1/3">
+            <h1 class="text-2xl font-bold mb-6 text-center">Regular Expression</h1>
+            <form>
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="inputUsername" name="username" required placeholder="Enter your username"
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <p id="validasiUsername" class="text-sm text-indigo-500 mt-1"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="inputEmail" name="email" required placeholder="Enter your email"
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <p id="validasiEmail" class="text-sm text-indigo-500 mt-1"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="inputPassword" name="password" required placeholder="Enter your password"
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <p id="validasiPassword" class="text-sm text-indigo-500 mt-1"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="tel" id="inputNomor" name="phone" required placeholder="Enter your phone number"
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <p id="validasiNomor" class="text-sm text-indigo-500 mt-1"></p>
+                </div>
+                <div class="mb-4">
+                    <label for="postcode" class="block text-sm font-medium text-gray-700">Postcode</label>
+                    <input type="text" id="inputKode" name="postcode" required placeholder="Enter your postcode"
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <p id="validasiKode" class="text-sm text-indigo-500 mt-1"></p>
+                </div>
+                <div class="flex justify-center">
+                    <button type="submit" class="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md">Done</button>
+                </div>
+            </form>
         </div>
-    </div>
-    <div class="flex flex-wrap mt-10 px-5 gap-5">
-        <div class="w-[23rem]">
-            <label for="nim" class="font-semibold text-black block leading-6">Username</label>
-            <div class="mt-2">
-                <input type="text" id="inputUsername" name="username" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="silahkan input username (tidak lebih dari 30 huruf)">
-                <p id="validasiUsername" class="mt-1"></p>
-            </div>
-        </div>
-
-        <div class="w-[23rem]">
-            <label for="nim" class="font-semibold text-black block leading-6">Password</label>
-            <div class="mt-2">
-                <input type="text" id="inputPassword" name="password" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="minimal delapan huruf">
-                <p id="validasiPassword" class="mt-1"></p>
-            </div>
-        </div>
-
-        <div class="w-[23rem]">
-            <label for="email" class="font-semibold text-black block leading-6">Email</label>
-            <div class="mt-2">
-                <input type="text" id="inputEmail" name="email" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="masukkan email anda">
-                <p id="validasiEmail" class="mt-1"></p>
-            </div>
-        </div>
-
-        <div class="w-[23rem]">
-            <label for="email" class="font-semibold text-black block leading-6">Nomor Telepon</label>
-            <div class="mt-2">
-                <input type="text" id="inputNomor" name="nomor" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="masukkan nomor telepon">
-                <p id="validasiNomor" class="mt-1"></p>
-            </div>
-        </div>
-
-        <div class="w-[23rem]">
-            <label for="kodepos" class="font-semibold text-black block leading-6">Kode Pos</label>
-            <div class="mt-2">
-                <input type="text" id="inputKode" name="kode" required class="block w-full rounded shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2 py-1.5" placeholder="masukkan kode pos anda">
-                <p id="validasiKode" class="mt-1"></p>
-            </div>
-        </div>
-
     </div>
 
     <script>
@@ -75,8 +67,6 @@
         const REGEX_NOMOR = new RegExp("^\\+?[0-9-]+$");
         const REGEX_KODE = new RegExp("^\\d{1,6}$");
 
-
-
         regexInputUsername.addEventListener("input", () => {
             handleInput(regexInputUsername, usernameValidasi, REGEX_USERNAME);
         });
@@ -95,35 +85,11 @@
 
         function handleInput(inputElement, validationElement, regex) {
             if (inputElement.value === "") {
-                validationElement.classList.remove("text-black");
-                validationElement.classList.remove("text-black");
-                inputElement.classList.add("focus:ring-indigo-600");
-                inputElement.classList.remove("focus:ring-red-500");
-                inputElement.classList.remove("focus:ring-green-500");
-                inputElement.classList.add("ring-grey-300");
-                inputElement.classList.remove("ring-red-500");
-                inputElement.classList.remove("ring-green-500");
-                validationElement.innerHTML = "";
+                validationElement.innerHTML = "Field is required";
             } else if (regex.test(inputElement.value)) {
-                validationElement.classList.add("text-black");
-                validationElement.classList.remove("text-black");
-                inputElement.classList.remove("focus:ring-indigo-600");
-                inputElement.classList.remove("focus:ring-red-500");
-                inputElement.classList.add("focus:ring-green-500");
-                inputElement.classList.remove("ring-grey-300");
-                inputElement.classList.remove("ring-red-500");
-                inputElement.classList.add("ring-green-500");
                 validationElement.innerHTML = "Valid";
             } else {
-                validationElement.classList.add("text-black");
-                validationElement.classList.remove("text-white");
-                inputElement.classList.remove("focus:ring-indigo-600");
-                inputElement.classList.remove("focus:ring-green-500");
-                inputElement.classList.add("focus:ring-red-500");
-                inputElement.classList.remove("ring-grey-300");
-                inputElement.classList.remove("ring-green-500");
-                inputElement.classList.add("ring-red-500");
-                validationElement.innerHTML = "Invalid";
+                validationElement.innerHTML = "Invalid format";
             }
         }
     </script>
